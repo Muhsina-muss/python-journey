@@ -1,0 +1,14 @@
+# Day 3: if-else voting eligibility checker
+# Purpose: Ask name + age, then decide if user can vote
+
+name = input("enter your name: ")  # input() always gives text, so 'name' is a string
+age = input("enter ur age: ")      # input() gives text like "14", not number 14
+age = int(age)                     # int() converts "14" to 14 so we can do math/comparison
+
+# Check if age is 18 or above
+if age >= 18:  # Note: colon : is required. Indent next line with 4 spaces
+    print("hello " + name + " you can vote")  # + joins strings. Works because name is text
+else:  # else must be at same level as 'if'. Colon : required
+    years_left = 18 - age           # Good practice: store calculation in a variable first
+    # print with commas: auto-adds spaces + handles numbers, so no str() needed
+    print("hello", name, "ur age is", age, "wait,", years_left, "more years to vote")
