@@ -1,0 +1,13 @@
+# Day 3: MCA Eligibility Checker with Input Validation
+# Author: Muhsina
+# Date: April 25, 2026
+
+name = input("enter ur name: ")
+marks = int(input("enter ur mca marks: "))
+
+if marks < 0 or marks > 100:
+    print("hello", name, "mark is invalid, please enter 0-100 only")
+elif marks >= 50:
+    print("hello", name, "u r eligible for mca")
+else:
+    print("hello", name, "u r not eligible")
