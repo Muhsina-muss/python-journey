@@ -1,0 +1,34 @@
+# Day 4: MCA Scholarship Checker 
+# Author: Muhsina
+# Concept: if-elif-else + and/or + nested if
+# Date: April 26, 2026
+
+# Step 1: Get user input
+name = input("enter ur name")  # input() always gives text
+marks = int(input("enter ur marks"))  # int() converts text to number
+income = int(input("enter ur income"))  # int() for math comparisons
+
+print("\n--- Scholarship Result ---")  # \n = new line for clean output
+
+# Step 2: Check all conditions using if-elif-else
+# Check 1: Invalid marks first - catches bad data early
+if marks < 0 or marks > 100:
+    print("hello", name, "invalid marks. Please enter 0-100 only")
+
+# Check 2: Eligible for main scholarship 
+# 'and' means BOTH conditions must be True
+elif marks >= 50 and income < 200000:
+    print("hello", name, "u r eligible for MCA scholarship")
+    
+    # Nested if: This runs ONLY if main scholarship is True
+    # 'or' means AT LEAST ONE condition must be True
+    if marks >= 90 or income < 100000:
+        print("hello", name, "u r eligible for special scholarship too!")
+
+# Check 3: Good marks but income too high
+elif marks >= 50 and income >= 200000:
+    print("hello", name, "marks ok but income is high for scholarship")
+
+# Check 4: Everything else = not eligible
+else:
+    print("hello", name, "not eligible. Need minimum 50 marks")
