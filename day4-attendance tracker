@@ -1,0 +1,13 @@
+attendances = [82, 74, 90, 68, 75, 88, 70]
+lowest_attnd = attendances[0]
+
+detained_list = []
+for attendance in attendances:
+    if attendance < lowest_attnd:
+        lowest_attnd = attendance
+
+    if attendance < 75: 
+        detained_list.append(attendance)
+print("low attendance is",lowest_attnd )
+print("detained list are ",detained_list)
+print("detained list:" ,len(detained_list))
